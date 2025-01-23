@@ -1,0 +1,279 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+		background: #444;
+        background: url('photo/14mmBieszczady.jpg') no-repeat center center fixed;
+		
+        background-size: cover;
+        color: #fff;
+}
+
+.main-header {
+    position: relative;
+	height: 60px;
+	background: #333;
+    color: #fff;
+    background-image: url('photo/Panorama.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 40px;
+    padding: 60px 0;
+}
+.main-header h1 {
+	position: absolute;
+    top: 20px; /* Ustaw odstęp od góry */
+    width: 100%;
+    text-align: center;
+    font-size: 28px; /* Rozmiar czcionki */
+    color: #fff; /* Kolor tekstu */
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Lekki cień dla kontrastu */
+    z-index: 10; /* Aby wyświetlała się nad tłem */
+	
+}
+
+.main-menu {
+    background-color: rgba(0, 0, 0, 0.85);
+	height: 60px;
+    text-align: center;
+    padding: 0 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	z-index: 10;
+	
+}
+.main-menu.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: rgba(4a, 4a, 4a, 0.8); /* Możemy zmienić kolor tła po przewinięciu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Cień pod menu po przyczepieniu */
+}
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu li {
+    margin: 0 15px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main-menu a:hover {
+    color: #FFD700;
+}
+
+.welcome-page {
+	margin-top: 35px;
+	margin-left: 80px;
+	margin-right: 400px; /* Uwzględnia szerokość sidebaru */
+    padding: 10px;
+	
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Ogólny styl kontenera */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Nagłówki */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+h2, h3 {
+    color: #fff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Lekki cień dla kontrastu */
+    z-index: 10; /* Aby wyświetlała się nad tłem */
+    color: #fff;
+}
+
+/* Posty na forum */
+.discussion .post {
+    background: linear-gradient(135deg, #000000, #333);
+    opacity: 0.8;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1d9e6;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.discussion .post:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Autor i czas publikacji */
+.post-author {
+    font-weight: bold;
+    color: #84bff9;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #7fb0b3;
+    margin-left: 10px;
+}
+
+/* Tekst wpisu */
+.post p {
+    margin-top: 10px;
+    color: #bfdefd;
+    line-height: 1.6;
+}
+
+/* Formularz dodawania wpisów */
+#new-post-form {
+    background: linear-gradient(135deg, #000000, #333);
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* Pola formularza */
+#new-post-form input,
+#new-post-form textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 10s;
+}
+
+#new-post-form input:focus,
+#new-post-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Przycisk formularza */
+#new-post-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#new-post-form button:hover {
+    background: linear-gradient(135deg, #FFD700, #968002);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Animacja formularza przy kliknięciu */
+#new-post-form button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dodatkowe detale stopki */
+footer {
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.footer-icon:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Ustawia elementy w kolumnie */
+    align-items: center; /* Wyrównanie elementów na środku */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+}
+/*
+footer {
+	
+	bottom:0;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.footer-icon:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+*/
