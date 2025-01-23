@@ -174,7 +174,7 @@ p {
     z-index: 1000;
     overflow-y: auto;
 }
-}
+
 .modal.hidden {
     display: none;
 }
@@ -207,7 +207,9 @@ p {
     cursor: pointer;
     color: #fff;
 }
-
+.close-button:hover{
+    color:rgb(255, 0, 0)
+}
 /* Niestandardowy suwak w modal-body */
 .modal-content::-webkit-scrollbar
 	{ width: 10px; 	}
