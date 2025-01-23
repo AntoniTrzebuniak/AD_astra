@@ -1,0 +1,130 @@
+/* Globalny styl */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.main-header {
+    position: relative;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.main-header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.main-menu {
+    background-color: rgba(0, 0, 0, 0.85);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu li {
+    margin: 0 15px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.main-menu a:hover {
+    color: #FFD700;
+}
+
+/* Sekcja główna */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+.topic {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic a {
+    color: #333;
+    text-decoration: none;
+}
+
+.topic a:hover {
+    color: #FFD700;
+}
+
+/* Forum */
+.discussion .post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-author {
+    font-weight: bold;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+#new-post-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#new-post-form input,
+#new-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#new-post-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#new-post-form button:hover {
+    background-color: #FFD700;
+}
