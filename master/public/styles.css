@@ -9,6 +9,75 @@ body {
         color: #fff;
 }
 
+
+.articles-page {
+	margin-left: 100px;
+	margin-right: 100px;
+    padding: 20px;
+}
+
+.article-box {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.article-box:hover {
+    background-color: rgba(255, 215, 0, 0.8);
+}
+
+.article-image {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-text {
+    padding: 20px;
+}
+
+.article-text h2 {
+    margin-top: 0;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+        .modal.hidden {
+            display: none;
+        }
+
+        .modal-content {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+        }
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #fff;
+}
+
 .main-header {
     position: relative;
 	height: 60px;
@@ -92,157 +161,157 @@ p {
     line-height: 1.6;
 }
 
-/* Ogólny styl kontenera */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal.hidden {
+    display: none;
+}
+.modal-body {
+    max-height: calc(80% - 60px); /* Odejmuje wysokość nagłówka i przycisku zamknięcia */
+    margin-top: 20px;
+    padding-right: 10px;
+    color: #fff; /* Zapewnia czytelność tekstu */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+/* Ustawienia dla samego modala */
+.modal-content {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    max-height: 80%; /* Maksymalna wysokość modala */
+    overflow: hidden; /* Ukrywa wszystko, co wykracza poza wysokość modala */
+	overflow-y: auto;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+.close-button:hover{
+    color:rgb(255, 0, 0)
+}
+/* Niestandardowy suwak w modal-body */
+.modal-content::-webkit-scrollbar
+	{ width: 10px; 	}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5); /* Kolor tła toru suwaka */
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #959696; /* Złoty kolor suwaka */
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3); /* Cienka ramka wokół suwaka */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: #f7e55c; /* Zmiana koloru po najechaniu */
+}
+
+/* czesc stylu dla forum */
+
+/* Sekcja główna */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
-}
-
-/* Nagłówki */
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #222;
 }
 
 h2, h3 {
     color: #fff;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Lekki cień dla kontrastu */
-    z-index: 10; /* Aby wyświetlała się nad tłem */
-    color: #fff;
 }
 
-/* Posty na forum */
-.discussion .post {
-    background: linear-gradient(135deg, #000000, #333);
-    opacity: 0.8;
+.topic {
+    background-color: #333;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #d1d9e6;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
 }
 
-.discussion .post:hover {
-    transform: translateY(-5px);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-
+.topic a {
+    color: #fff;
+    text-decoration: none;
 }
 
-/* Autor i czas publikacji */
+.topic:hover {
+	background-color: #968002;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.topic:hover a, .topic:hover h2, .topic:hover h3 {
+	/*color: #FFD700;*/
+}
+/* Forum */
+.discussion .post {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
 .post-author {
     font-weight: bold;
-    color: #84bff9;
 }
 
 .post-time {
     font-size: 12px;
-    color: #7fb0b3;
-    margin-left: 10px;
+    color: #777;
 }
 
-/* Tekst wpisu */
-.post p {
-    margin-top: 10px;
-    color: #bfdefd;
-    line-height: 1.6;
-}
 
-/* Formularz dodawania wpisów */
+
 #new-post-form {
-    background: linear-gradient(135deg, #000000, #333);
-    opacity: 0.8;
+    background-color: #333;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e0e0e0;
-    margin-top: 20px;
-    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Pola formularza */
 #new-post-form input,
 #new-post-form textarea {
     width: 95%;
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
-    color: #333;
-    background-color: #fafafa;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: border-color 10s;
+    border-radius: 4px;
 }
 
-#new-post-form input:focus,
-#new-post-form textarea:focus {
-    border-color: #3498db;
-    outline: none;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-}
-
-/* Przycisk formularza */
 #new-post-form button {
-    padding: 12px 20px;
-    font-size: 16px;
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    padding: 10px 20px;
+    background-color: #959ba3;
     color: #fff;
     border: none;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
 }
 
 #new-post-form button:hover {
-    background: linear-gradient(135deg, #FFD700, #968002);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    background-color: #FFD700;
 }
-
-/* Animacja formularza przy kliknięciu */
-#new-post-form button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Dodatkowe detale stopki */
-footer {
-    bottom: 0;
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 20px;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-icons {
-    margin-top: 10px;
-}
-
-.footer-icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    filter: grayscale(100%);
-    transition: filter 0.3s, transform 0.3s;
-}
-
-.footer-icon:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-}
-
 
 .footer-content {
     display: flex;
@@ -250,7 +319,6 @@ footer {
     align-items: center; /* Wyrównanie elementów na środku */
     justify-content: center; /* Wyśrodkowanie w pionie */
 }
-/*
 footer {
 	
 	bottom:0;
@@ -276,4 +344,52 @@ footer {
     filter: grayscale(0%);
     transform: scale(1.1);
 }
-*/
+.sidebar {
+	position: absolute;
+    top: 200px; /* Dostosuj w razie potrzeby */
+    right: 0;
+    width: 300px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 3px solid #FFD700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.sidebar .article,
+.sidebar .forum-topic {
+    margin-bottom: 20px;
+}
+
+.sidebar .article h4,
+.sidebar .forum-topic h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sidebar .article h4 a,
+.sidebar .forum-topic h4 a {
+    text-decoration: none;
+    color: #0056b3;
+    transition: color 0.3s;
+}
+
+.sidebar .article h4 a:hover,
+.sidebar .forum-topic h4 a:hover {
+    color: #FFD700;
+}
+
+.sidebar p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 5px 0 0;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrofotografia i Astronomia - Artykuły</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Główne zdjęcie gwiazd -->
+    <header class="main-header">
+	<h1>Ad Astra</h1>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li><a href="articles.html">Artykuły</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="foto.html">Astrofoto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Strona z artykułami -->
+	<main class="articles-page">
+        <h1>Artykuły</h1>
+        <div class="article-box" data-article-id="1">
+            <img src="photo/WieżaWidokowa-1.jpg" alt="Zdjęcie artykułu 1" class="article-image">
+            <div class="article-text">
+                <h2>Dlaczego gwiazdy migoczą?</h2>
+                <p>Migotanie gwiazd to zjawisko polegające na szybkich, nieregularnych zmianach jasności i barwy światła gwiazd widocznych z powierzchni Ziemi. Wynika ono z zakłóceń w atmosferze, które zmieniają kierunek i intensywność promieni świetlnych docierających do obserwatora.</p>
+            </div>
+        </div>
+        <div class="article-box" data-article-id="2" data-title="Gwiazdozbiory Południowego Nieba">
+            <img src="photo/Zorzanadjezioremprawo (1 of 1).jpg" alt="Zdjęcie artykułu 2" class="article-image">
+            <div class="article-text">
+                <h2>Zjawisko zorzy polarnej</h2>
+                <p>Aliquam erat volutpat. Aenean in ex sit amet massa ultrices aliquam. Vivamus tincidunt neque et nisi malesuada, nec luctus nulla commodo.</p>
+            </div>
+        </div>
+        <div class="article-box" data-article-id="3">
+            <img src="photo/WieżaWidokowa-1.jpg" alt="Zdjęcie artykułu 3" class="article-image">
+            <div class="article-text">
+                <h2>Rodzaje i typy teleskopów</h2>
+                <p>Istnieje kilka głównych typów teleskopów, z których każdy charakteryzuje się unikalną konstrukcją i właściwościami optycznymi. Poniżej przedstawiamy najważniejsze rodzaje teleskopów oraz ich budowę..</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Szablony artykułów -->
+    <template id="article-1">
+        <h1>Scyntylacja atmosferyczna i "Seeing"</h1>
+        <p>Migotanie gwiazd to zjawisko polegające na szybkich, nieregularnych zmianach jasności i barwy światła gwiazd widocznych z powierzchni Ziemi. Wynika ono z zakłóceń w atmosferze, które zmieniają kierunek i intensywność promieni świetlnych docierających do obserwatora.</p>
+        <img src="photo/WieżaWidokowa-1.jpg" alt="Wieża Widokowa" style="width:100%; border-radius: 8px;">
+        <h1>Scyntylacja atmosferyczna &ndash; zjawisko migotania gwiazd</h1>
+        <p>Scyntylacja atmosferyczna to fascynujące zjawisko, które bezpośrednio wpływa na jakość obserwacji astronomicznych. Polega na szybkich i nieregularnych zmianach jasności oraz barwy gwiazd widzianych z powierzchni Ziemi. Powodem tych fluktuacji są turbulencje w atmosferze, które zakłócają przebieg fal świetlnych docierających do teleskopów i innych instrumentów obserwacyjnych.</p>
+
+        <h2>Mechanizm powstawania scyntylacji</h2>
+        <p>Głównym sprawcą scyntylacji są <strong>turbulencje atmosferyczne</strong>. Atmosfera Ziemi nie jest jednorodnym ośrodkiem &ndash; składa się z warstw o zmiennej temperaturze, ciśnieniu i gęstości. Te zjawiska powodują fluktuacje współczynnika załamania światła, co skutkuje odchyleniami promieni świetlnych. Fale świetlne gwiazd przechodzące przez atmosferę ulegają załamaniu i interferencji, co prowadzi do efektów takich jak:</p>
+        <ul>
+            <li><strong>Zmiany jasności</strong>: Różnice w intensywności światła powodowane lokalnym ogniskowaniem i rozpraszaniem promieni.</li>
+            <li><strong>Przesunięcia kątowe</strong>: Zmiany w kącie docierania światła, prowadzone przez lokalne zmiany współczynnika załamania.</li>
+            <li><strong>Zmiany barwy</strong>: Krótsze fale światła (np. niebieskie) są bardziej podatne na załamanie niż dłuższe fale (czerwone), co powoduje chwilowe zmiany kolorów gwiazd.</li>
+        </ul>
+
+        <img src="photo/Scyntylacja_wykres1.jpeg" alt="Wykres1" style="width:100%; border-radius: 8px;">
+
+        <h2>Kluczowe zależności fizyczne</h2>
+        <p>W zrozumieniu i opisie scyntylacji kluczową rolę odgrywają następujące parametry:</p>
+        <ul>
+        <li><strong>Skala Frieda (ρ₀)</strong>:<br>
+        Skala Frieda opisuje rozmiar obszaru w atmosferze, w którym fale świetlne pozostają w przybliżeniu koherentne. Wyraża się wzorem:</p>
+        <div class="formula">
+        ρ₀ ∼ (λ² / Cₙ² ⋅ h)³/⁵
+        </div>
+        <p>Gdzie:</p>
+        <ul>
+            <li>λ to długość fali światła,</li>
+            <li>Cₙ² to współczynnik turbulencji atmosferycznej,</li>
+            <li>h to wysokość atmosfery, w której zachodzą turbulencje.</li>
+        </ul>
+        <p>Im mniejsza wartość skali Frieda, tym silniejsze turbulencje i gorsza jakość obrazu w teleskopie.</p>
+        </li>
+        <li><strong>Czas koherencji (τ₀)</strong>:<br>
+        Parametr ten definiuje czas, w którym turbulencje atmosferyczne pozostają w przybliżeniu stałe. Wyraża się on jako:</p>
+        <div class="formula">
+        τ₀ ∼ ρ₀ / v
+        </div>
+    <p>Gdzie v to średnia prędkość warstw atmosferycznych. Krótszy czas koherencji oznacza szybsze zmiany w atmosferze, co utrudnia obserwacje astronomiczne.</p>
+        </li>
+          </ul>
+
+    <h2>Dlaczego scyntylacja jest istotna w astronomii?</h2>
+    <p>Scyntylacja atmosferyczna jest jednym z głównych czynników ograniczających jakość obserwacji z powierzchni Ziemi. Jej wpływ jest szczególnie widoczny podczas obserwacji gwiazd punktowych, które migoczą bardziej intensywnie niż obiekty rozległe, takie jak planety.</p>
+    <p>Aby minimalizować negatywne skutki scyntylacji, stosuje się zaawansowane technologie, takie jak:</p>
+    <ul>
+        <li><strong>Optyka adaptatywna</strong>: Systemy te kompensują deformacje obrazu w czasie rzeczywistym, wykorzystując lustra o zmiennej geometrii.</li>
+        <li><strong>Obserwacje z kosmosu</strong>: Teleskopy umieszczone poza atmosferą (np. Hubble) nie są dotknięte scyntylacją, co pozwala na uzyskanie znacznie wyraźniejszych obrazów.</li>
+        <li><strong>Lokalizowanie obserwatorów na dużych wysokościach</strong>: Budowanie obserwatoriów na górskich szczytach redukuje wpływ scyntylacji, ponieważ teleskopy znajdują się ponad najgęstszą częścią atmosfery.</li>
+    </ul>
+
+    <h2>Podsumowanie</h2>
+    <p>Scyntylacja atmosferyczna to nieuniknione zjawisko wynikające z natury atmosfery Ziemi. Choć może stanowić przeszkodę dla astronomów, zrozumienie jej mechanizmów umożliwiło opracowanie nowoczesnych technologii, które pozwalają na uzyskanie wyraźnych i precyzyjnych obrazów kosmosu. Właśnie dzięki tym technologiom możemy cieszyć się niezwykłymi odkryciami, jakie oferuje współczesna astronomia.</p>
+
+		    
+    </template>
+
+    
+    <template id="article-2">
+		<img src="photo/Zorzanadjezioremprawo (1 of 1).jpg" alt="zorza" style="width:100%; border-radius: 8px; height">
+        <h1>Zorza Polarna</h1>
+        <h2>Mechanizm Powstawania Zorzy Polarnej</h2>
+    <p>Słońce emituje strumień naładowanych cząstek, głównie protonów i elektronów, zwany wiatrem słonecznym. Gdy te cząstki docierają do Ziemi, większość z nich jest odchylana przez pole magnetyczne naszej planety. Jednak część z nich wnika w magnetosferę i jest kierowana w stronę biegunów magnetycznych.</p>
+    <p>Energia kinetyczna tych cząstek jest transferowana do atmosfery podczas kolizji z atomami i cząsteczkami tlenu oraz azotu. W wyniku tych interakcji dochodzi do wzbudzenia cząsteczek, a następnie emisji fotonów podczas deekscytacji:</p>
+    <div class="formula">
+        E = h \nu
+    </div>
+    <p>Gdzie:
+        <ul>
+            <li><strong>E</strong> &ndash; energia emitowanego fotonu,</li>
+            <li><strong>h</strong> &ndash; stała Plancka,</li>
+            <li><strong>\nu</strong> &ndash; częstotliwość promieniowania.</li>
+        </ul>
+    </p>
+
+    <h2>Rola Rekoneksji Magnetycznej</h2>
+    <p>Rekoneksja magnetyczna to proces, w którym linie pola magnetycznego o przeciwnych zwrotach łączą się, uwalniając przy tym ogromne ilości energii. W kontekście zorzy polarnej, rekoneksja zachodzi w magnetosferze Ziemi, zwłaszcza w tzw. ogonie magnetosfery, po nocnej stronie planety.</p>
+    <p>Matematycznie, energia uwolniona podczas rekoneksji jest proporcjonalna do intensywności pola magnetycznego i objętości regionu rekoneksji:</p>
+    <div class="formula">
+        U = \frac{B^2}{2 \mu_0} \cdot V
+    </div>
+    <p>Gdzie:
+        <ul>
+            <li><strong>U</strong> &ndash; energia uwolniona w procesie rekoneksji,</li>
+            <li><strong>B</strong> &ndash; natężenie pola magnetycznego,</li>
+            <li><strong>\mu_0</strong> &ndash; przenikalność magnetyczna próżni,</li>
+            <li><strong>V</strong> &ndash; objętość obszaru rekoneksji.</li>
+        </ul>
+    </p>
+
+    <h2>Kolory Zorzy</h2>
+    <p>Barwa zorzy zależy od rodzaju atomów i wysokości, na której zachodzi emisja:</p>
+    <ul>
+        <li><strong>Zielona zorza</strong>: najczęściej obserwowana, pochodzi z emisji atomów tlenu na wysokości około 100 km.</li>
+        <li><strong>Czerwona zorza</strong>: rzadsza, również związana z tlenem, ale na wysokościach powyżej 200 km.</li>
+        <li><strong>Fioletowa i niebieska zorza</strong>: wynikają z emisji atomów azotu.</li>
+    </ul>
+
+    <h2>Znaczenie Badań nad Rekoneksją Magnetyczną</h2>
+    <p>Zrozumienie mechanizmów rekoneksji magnetycznej ma kluczowe znaczenie nie tylko dla prognozowania zórz polarnych, ale także dla przewidywania tzw. pogody kosmicznej. Burze magnetyczne wywołane rekoneksją mogą wpływać na działanie satelitów, systemów komunikacji oraz sieci energetycznych na Ziemi.</p>
+
+    <h2>Podsumowanie</h2>
+    <p>Zorza polarna jest nie tylko pięknym widowiskiem, ale także manifestacją skomplikowanych procesów fizycznych zachodzących w przestrzeni kosmicznej. Rekoneksja magnetyczna odgrywa kluczową rolę w jej powstawaniu, ukazując dynamiczną interakcję między Słońcem a Ziemią. Dzięki badaniom naukowym, możemy lepiej zrozumieć te zjawiska i przewidywać ich wpływ na nasze codzienne życie.</p>
+    </template>
+
+    <template id="article-3">
+    
+    </template>
+
+    <!-- Skrypty JS będą dynamicznie obsługiwać okna modalne -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body">
+
+            </div>
+        </div>
+    </div>
+	<footer>
+		<div class="footer-content">
+			<p>&copy; 2024 Ad Astra. Wszystkie prawa zastrzeżone.</p>
+			<div class="footer-icons">
+				<a href="#" target="_blank">
+					<img src="photo/fb.png" alt="Facebook" class="footer-icon">
+				</a>
+				<a href="#" target="_blank">
+					<img src="photo/insta.jpg" alt="Instagram" class="footer-icon">
+				</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
