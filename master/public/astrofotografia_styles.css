@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #cccccc);
+    color: #333;
+}
+main{
+    margin-right: 3%;
+    margin-left:3%;
+}
+.gallery-page {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gallery-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Panorama na pełną szerokość */
+.gallery-panorama {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.gallery-panorama img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.gallery-panorama:hover img {
+    transform: scale(1.02);
+}
+
+/* Reszta galerii */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Odległość między zdjęciami */
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 200px; /* Wysokość zdjęć */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Dopasowanie obrazu do kontenera */
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+.lightbox-caption {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.gallery-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    padding: 15px 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(50, 50, 50, 0.8));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-title h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif; /* Profesjonalna czcionka Google Fonts */
+}
+

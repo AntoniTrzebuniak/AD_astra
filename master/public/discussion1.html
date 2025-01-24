@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Czarna dziura - Tajemnice wszechświata</title>
     <link rel="stylesheet" href="forumstyle.css">
-    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!--<script src="script.js" defer></script>-->
+    <!--<script src="getposts.js" defer>const response = await fetch('http://localhost:3000/api/posts');</script>-->
 </head>
 <body>
+    <input type="hidden" id="discussionID" value="1">
     <header class="main-header">
         <div class="logo">
             <h1>Astronomia - Forum Dyskusyjne</h1>
@@ -17,9 +21,8 @@
                 <li><a href="index.html">Strona Główna</a></li>
                 <li><a href="articles.html">Artykuły</a></li>
                 <li><a href="forum.html">Forum</a></li>
-                <li><a href="oferta.html">Oferta</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="foto.html">Astrofoto</a></li>
+                <li><a href="Oferta.html">Oferta i Kontakt</a></li>
+                <li><a href="Astrofotografia.html">Astrofoto</a></li>
 				
             </ul>
         </nav>
@@ -28,9 +31,7 @@
     <div class="container">
         <section class="discussion">
             <h2>Czarna dziura - tajemnice wszechświata</h2>
-
             <div class="posts-container"></div>
-            <script src="getposts.js" defer></script>
             
             <h3>Dodaj wpis</h3>
             <form id="new-post-form">
@@ -42,23 +43,125 @@
 
                 <button type="submit">Opublikuj</button>
             </form>
+        
         </section>
     </div>
+    
     
 	<footer>
 		<div class="footer-content">
 			<p>&copy; 2024 Ad Astra. All rights reserved.</p>
 			<div class="footer-icons">
 				<a href="#" target="_blank">
-					<img src="../../photo/fb.png" alt="Facebook" class="footer-icon">
+					<img src="photo/fb.png" alt="Facebook" class="footer-icon">
 				</a>
 				<a href="#" target="_blank">
-					<img src="../../photo/insta.jpg" alt="Instagram" class="footer-icon">
+					<img src="photo/insta.jpg" alt="Instagram" class="footer-icon">
 				</a>
 			</div>
 		</div>
 	</footer>
+    <script>
+       // const discussionID = document.getElementById('discussionID').value;
+        const discussionID = 1;
+        function addPostToPage(post) {
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            postElement.innerHTML = `
+                <div class="post-author">
+                    <strong>${post.username}</strong>
+                    <span class="post-time">${post.time}</span>
+                </div>
+                <p>${post.content}</p>
+            `;
 
+            // Dodaj nowy wpis na początku sekcji z wpisami
+            const postsContainer = document.getElementById('posts-container');
+            postsContainer.insertBefore(postElement, postsContainer.firstChild);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Pobierz zapisane wpisy z serwera
+            console.log('Discussion ID:', discussionID);
+            fetch(`/api/posts/${discussionID}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Błąd podczas pobierania wpisów');
+                    }
+                    return response.json();
+                })
+                .then(posts => {
+                    // Wyświetl wpisy w kolejności od najnowszego do najstarszego
+                    posts.reverse().forEach(post => {
+                        addPostToPage(post);
+                    });
+                })
+                .catch(error => {
+                    console.error('Błąd:', error.message);
+                });
+        });
+    document.getElementById('new-post-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+    
+        const username = document.getElementById('username').value;
+        const content = document.getElementById('post-content').value;
+    
+        if (username && content) {
+            const newPost = {
+                username,
+                content,
+                time: new Date().toLocaleString()
+            };
+    
+            try {
+                const response = await fetch(`/api/posts/${discussionID}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(newPost),
+                });
+                if (response.ok) {
+                    if (response.ok) {
+                    location.reload(); // Wymuszenie odświeżenia strony
+                }}
+    
+            } catch (error) {
+                console.error('Błąd przy dodawaniu wpisu:', error);
+            }
+        }
+    });
+    /*document.addEventListener('DOMContentLoaded', function () {
+    // Pobierz zapisane wpisy z serwera
+    fetch('/api/posts/${discussionID}')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Błąd podczas pobierania wpisów');
+            }
+            return response.json(); // Parsowanie odpowiedzi jako JSON
+        })
+        .then(posts => {
+            const discussionSection = document.querySelector('.posts-container');
+
+            // Wyświetl każdy wpis
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post');
+                postElement.innerHTML = `
+                    <div class="post-author">
+                        <strong>${post.username}</strong>
+                        <span class="post-time">${post.time}</span>
+                    </div>
+                    <p>${post.content}</p>
+                `;
+                discussionSection.appendChild(postElement);
+            });
+        })
+        .catch(error => {
+            console.error('Błąd:', error.message);
+        });
+});*/
+    </script>
     
 </body>
 </html>

@@ -1,3 +1,5 @@
+const urlParams = new URLSearchParams(window.location.search);
+const discussionId = urlParams.get('discussionId');
 document.addEventListener("DOMContentLoaded", function () {
     const articles = document.querySelectorAll(".article-box");
     const modal = document.getElementById("modal");
@@ -51,4 +53,21 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.classList.remove("scrolled");
         }
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Pobierz identyfikator artykułu z adresu URL
+    const hash = window.location.hash.substring(1);
+    const articleTemplate = document.querySelector(`#${hash}`);
+
+    if (articleTemplate) {
+        // Znajdź kontener na artykuły i wstaw treść z template
+        const articlesPage = document.querySelector(".articles-page");
+        articlesPage.innerHTML = ""; // Wyczyść zawartość
+        articlesPage.appendChild(articleTemplate.content.cloneNode(true));
+    } else {
+        // Jeśli brak identyfikatora, wyświetl komunikat lub domyślne treści
+        const articlesPage = document.querySelector(".articles-page");
+        articlesPage.innerHTML = "<h1>Wybierz artykuł z menu powyżej.</h1>";
+    }
 });

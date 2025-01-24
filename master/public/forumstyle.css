@@ -121,7 +121,7 @@ h2, h3 {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
     border: 1px solid #d1d9e6;
     transition: transform 0.3s, box-shadow 0.3s;
 }
