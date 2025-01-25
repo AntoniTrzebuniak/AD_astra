@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="forumstyle.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!--<script src="script.js" defer></script>-->
-    <!--<script src="getposts.js" defer>const response = await fetch('http://localhost:3000/api/posts');</script>-->
 </head>
 <body>
-    <input type="hidden" id="discussionID" value="1">
+    <input type="hidden" id="discussionID" value="2">
     <header class="main-header">
         <div class="logo">
             <h1>Astronomia - Forum Dyskusyjne</h1>
@@ -30,7 +28,7 @@
 
     <div class="container">
         <section class="discussion">
-            <h2>Czarna dziura - tajemnice wszechświata</h2>
+            <h2>Teleskopy przyszłości - jak zmienią naszą wiedzę?</h2>
             <div class="posts-container"></div>
             
             <h3>Dodaj wpis</h3>
@@ -86,12 +84,12 @@
             const posts = await response.json();
             const postsContainer = document.querySelector('.posts-container');
             postsContainer.innerHTML = posts.map(post => `
-                <div class="post">
+                    <div class="post">
                     <div class="post-author">
                         <strong>${post.username}</strong>
                         <span class="post-time">${post.timestamp}</span>
                     </div>
-                    <p>${post.content}</p>
+                <p>${post.content}</p>
                 </div>
             `).join('');
         }
@@ -135,67 +133,6 @@
         }
     });
     fetchPosts();
-    /*document.getElementById('new-post-form').addEventListener('submit', async function(event) {
-        event.preventDefault();
-    
-        const username = document.getElementById('username').value;
-        const content = document.getElementById('post-content').value;
-    
-        if (username && content) {
-            const newPost = {
-                username,
-                content,
-                time: new Date().toLocaleString()
-            };
-    
-            try {
-                const response = await fetch(`/api/posts/${discussionID}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(newPost),
-                });
-                if (response.ok) {
-                    if (response.ok) {
-                    location.reload(); // Wymuszenie odświeżenia strony
-                }}
-    
-            } catch (error) {
-                console.error('Błąd przy dodawaniu wpisu:', error);
-            }
-        }
-    });*/
-    /*document.addEventListener('DOMContentLoaded', function () {
-    // Pobierz zapisane wpisy z serwera
-    fetch('/api/posts/${discussionID}')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Błąd podczas pobierania wpisów');
-            }
-            return response.json(); // Parsowanie odpowiedzi jako JSON
-        })
-        .then(posts => {
-            const discussionSection = document.querySelector('.posts-container');
-
-            // Wyświetl każdy wpis
-            posts.forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.classList.add('post');
-                postElement.innerHTML = `
-                    <div class="post-author">
-                        <strong>${post.username}</strong>
-                        <span class="post-time">${post.time}</span>
-                    </div>
-                    <p>${post.content}</p>
-                `;
-                discussionSection.appendChild(postElement);
-            });
-        })
-        .catch(error => {
-            console.error('Błąd:', error.message);
-        });
-});*/
     </script>
     
 </body>

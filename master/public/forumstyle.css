@@ -88,7 +88,7 @@ h1 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 0.8em;
     line-height: 1.6;
 }
 
@@ -116,8 +116,8 @@ h2, h3 {
 
 /* Posty na forum */
 .discussion .post {
-    background: linear-gradient(135deg, #000000, #333);
-    opacity: 0.8;
+    background: linear-gradient(135deg, #0000009a, #3333338f);
+    backdrop-filter: blur(10px);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
@@ -135,12 +135,12 @@ h2, h3 {
 /* Autor i czas publikacji */
 .post-author {
     font-weight: bold;
-    color: #84bff9;
+    color: #abd2fa;
 }
 
 .post-time {
     font-size: 12px;
-    color: #7fb0b3;
+    color: #a6c4c6;
     margin-left: 10px;
 }
 
@@ -250,30 +250,4 @@ footer {
     align-items: center; /* Wyrównanie elementów na środku */
     justify-content: center; /* Wyśrodkowanie w pionie */
 }
-/*
-footer {
-	
-	bottom:0;
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
 
-.footer-icons {
-    margin-top: 10px;
-}
-
-.footer-icon {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    filter: grayscale(100%);
-    transition: filter 0.3s, transform 0.3s;
-}
-
-.footer-icon:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-}
-*/

@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path'); // Dodane do obsługi ścieżek
+const { timeStamp } = require('console');
 
 const app = express();
 const PORT = 3000;
@@ -33,18 +34,22 @@ function writeData(discussionID, data) {
 
 app.get('/api/posts/:discussionID', (req, res) => {
     const { discussionID } = req.params;
-    const posts = readData();
+    const posts = readData(discussionID);
     res.json(posts);
 });
 
 
 // Endpoint: Dodawanie nowego wpisu
 app.post('/api/posts/:discussionID', (req, res) => {
-    console.log('Discussion ID:', req.params.discussionID); // Loguj ID
-    console.log('New Post Data:', req.body); // Loguj dane nowego wpisu
     const { discussionID } = req.params;
+    const { username, content } = req.body;
     const posts = readData(discussionID);
-    const newPost = req.body;
+    const newPost = {
+        username,
+        content,
+        timestamp: new Date().toLocaleString()
+    };
+    newPost.timestamp = new Date().toLocaleString();
     newPost.id = Date.now();
     posts.push(newPost);
     writeData(discussionID, posts);
