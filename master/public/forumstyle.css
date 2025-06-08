@@ -1,3 +1,35 @@
+@media screen and (max-width: 700px) {
+    .sidebar {
+        display: none;
+    }
+    nav.main-menu {
+        background-color: rgba(0, 0, 0, 0);
+ 
+        text-align: center;
+        padding: 0 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 0;
+        
+    }
+    .main-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: translateY(-36%);
+        padding-bottom: 10px;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+    .main-header {
+        height: auto;
+        padding-bottom: 120px;
+    }
+
+    .main-menu li {
+        margin: 5px 0;
+    }
+}
+
 body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -14,7 +46,7 @@ body {
 	height: 60px;
 	background: #333;
     color: #fff;
-    background-image: url('photo/Panorama.png');
+    background-image: url('photo/CentrumFinalne.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

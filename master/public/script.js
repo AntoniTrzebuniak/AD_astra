@@ -53,6 +53,16 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.classList.remove("scrolled");
         }
     });
+    function adjustHeaderText() {
+        const headerText = header.querySelector("h1");
+        if (window.innerWidth <= 700) {
+            headerText.style.fontSize = Math.max(16, window.innerWidth / 25) + "px";
+        } else {
+            headerText.style.fontSize = ""; // Reset to default size for larger screens
+        }
+    }
+    adjustHeaderText();
+    window.addEventListener("resize", adjustHeaderText);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -71,3 +81,4 @@ document.addEventListener("DOMContentLoaded", () => {
         articlesPage.innerHTML = "<h1>Wybierz artykuł z menu powyżej.</h1>";
     }
 });
+

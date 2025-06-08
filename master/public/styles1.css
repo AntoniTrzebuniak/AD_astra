@@ -1,0 +1,474 @@
+@media screen and (max-width: 700px) {
+    .sidebar {
+        display: none;
+    }
+    .welcome-page {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    section {
+        flex: 1;
+    }
+    .main-menu {
+        height: 100px;
+        padding: 5px 0;
+    }
+    .main-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        transform: translateY(-50%);
+    }
+
+    .main-menu li {
+        margin: 5px 10px;
+    }
+    
+    .main-menu a {
+        font-size: 14px;
+        height: 100px;
+    }
+    .main-header {
+        min-height: 200px;
+        background-position: top center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px; /* Dodajemy padding na górze */
+    }
+
+    /*.main-header h1 {
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 10px;
+    }*/
+}
+
+
+
+
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('photo/14mmBieszczady.jpg') no-repeat center center fixed;
+		
+        background-size: cover;
+        color: #fff;
+}
+
+
+.articles-page {
+	margin-left: 10%;
+	margin-right: 10%;
+    padding: 20px;
+}
+
+.article-box {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.article-box:hover {
+    background-color: rgba(255, 215, 0, 0.8);
+}
+
+.article-image {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-text {
+    padding: 20px;
+}
+
+.article-text h2 {
+    margin-top: 0;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+        .modal.hidden {
+            display: none;
+        }
+
+        .modal-content {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+        }
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.main-header {
+    position: relative;
+	height: 60px;
+	background: #333;
+    color: #fff;
+    background-image: url('photo/CentrumFinalne.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 40px;
+    padding: 60px 0;
+}
+.main-header h1 {
+	position: absolute;
+    top: 20px; /* Ustaw odstęp od góry */
+    width: 100%;
+    text-align: center;
+    font-size: 28px; /* Rozmiar czcionki */
+    color: #fff; /* Kolor tekstu */
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Lekki cień dla kontrastu */
+    z-index: 10; /* Aby wyświetlała się nad tłem */
+	
+}
+
+.main-menu {
+    background-color: rgba(0, 0, 0, 0.85);
+	height: 60px;
+    text-align: center;
+    padding: 0 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	z-index: 10;
+	
+}
+.main-menu.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: rgba(4a, 4a, 4a, 0.8); /* Możemy zmienić kolor tła po przewinięciu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Cień pod menu po przyczepieniu */
+}
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-menu li {
+    margin: 0 15px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main-menu a:hover {
+    color: #FFD700;
+}
+
+
+h1 {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal.hidden {
+    display: none;
+}
+.modal-body {
+    max-height: calc(80% - 60px); /* Odejmuje wysokość nagłówka i przycisku zamknięcia */
+    margin-top: 20px;
+    padding-right: 10px;
+    color: #fff; /* Zapewnia czytelność tekstu */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+/* Ustawienia dla samego modala */
+.modal-content {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    max-height: 80%; /* Maksymalna wysokość modala */
+    overflow: hidden; /* Ukrywa wszystko, co wykracza poza wysokość modala */
+	overflow-y: auto;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+.close-button:hover{
+    color:rgb(255, 0, 0)
+}
+/* Niestandardowy suwak w modal-body */
+.modal-content::-webkit-scrollbar
+	{ width: 10px; 	}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgb(154, 154, 154); /* Kolor tła toru suwaka */
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #4b4a4a; /* Złoty kolor suwaka */
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.5); /* Cienka ramka wokół suwaka */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: #FFD700; /* Zmiana koloru po najechaniu */
+}
+
+/* czesc stylu dla forum */
+
+/* Sekcja główna */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3 {
+
+    color: #fff;
+}
+.forum-topics h2, .forum-topics h3, .forum-topics p {
+    color: #fff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1); /* Lekki cień dla kontrastu */
+    z-index: 10; /* Aby wyświetlała się nad tłem */
+    color: #fff;
+}
+
+.topic {
+    background: linear-gradient(135deg, #000000a0, #333333a0);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+    border: 2px solid rgba(254, 245, 193, 0.63);
+}
+
+.topic a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.topic:hover {
+    background: linear-gradient(135deg, #857102c0, #e4c200c0);
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.topic:hover a, .topic:hover h2, .topic:hover h3 {
+	/*color: #FFD700;*/
+}
+/* Forum */
+.discussion .post {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+.post-author {
+    font-weight: bold;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #777;
+}
+
+
+
+#new-post-form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#new-post-form input,
+#new-post-form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#new-post-form button {
+    padding: 10px 20px;
+    background-color: #959ba3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#new-post-form button:hover {
+    background-color: #FFD700;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Ustawia elementy w kolumnie */
+    align-items: center; /* Wyrównanie elementów na środku */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+}
+footer {
+	
+	bottom:0;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.footer-icon:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.welcome-page {
+	margin-top: 35px;
+	margin-left: 7%;
+    margin-right: 0;
+    padding: 0px;
+	display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 100%;
+}
+section {
+    flex: 4;
+    padding: 15px;
+    padding: 0;
+}
+.sidebar {
+    flex: 1;
+    height: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-left: 3px solid #FFD700;
+    border-right: 0px solid #FFD700; 
+    border-top: 1px solid #FFD700;
+    border-bottom: 1px solid #FFD700;
+    border-radius: 20px 0 0 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    color: #ffffff;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.sidebar .article,
+.sidebar .forum-topic {
+    margin-bottom: 20px;
+}
+
+.sidebar .article h4,
+.sidebar .forum-topic h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sidebar .article h4 a,
+.sidebar .forum-topic h4 a {
+    text-decoration: none;
+    color: #b3d5f8;
+    display:block;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .article h4 a:hover,
+.sidebar .forum-topic h4 a:hover {
+    
+    background-color: #FFD700;
+    color: #333;
+    border-radius: 5px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 5px 0 0;
+}
