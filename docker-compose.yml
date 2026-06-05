@@ -22,6 +22,7 @@ services:
       - "8080:80"
     volumes:
       - ./master:/var/www/html
+      - ./master/observatory/apache.conf:/etc/apache2/sites-available/000-default.conf
     depends_on:
       mysql:
         condition: service_healthy
@@ -34,7 +35,6 @@ services:
     command: >
       bash -c "docker-php-ext-install pdo pdo_mysql &&
       a2enmod rewrite &&
-      sed -i 's|/var/www/html|/var/www/html/observatory|g' /etc/apache2/sites-available/000-default.conf &&
       apache2-foreground"
 
   node:

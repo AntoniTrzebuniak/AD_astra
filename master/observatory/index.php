@@ -45,10 +45,7 @@ $path = $uri;
 if ($base !== '' && str_starts_with($path, $base)) {
     $path = substr($path, strlen($base));
 }
-$path = '/' . trim($path, '/');
-if ($path === '/') {
-    $path = '';
-}
+$path = trim($path, '/');
 
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 

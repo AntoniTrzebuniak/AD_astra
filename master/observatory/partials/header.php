@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($title ?? SITE_NAME) ?> - Ad Astra</title>
-    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="<?= e(assetUrl('styles.css')) ?>">
     <link rel="stylesheet" href="<?= e(assetUrl('css/observatory.css')) ?>">
     <script src="<?= e(assetUrl('js/countdown.js')) ?>" defer></script>
 </head>
@@ -13,11 +13,11 @@
         <h1>Ad Astra</h1>
         <nav class="main-menu">
             <ul>
-                <li><a href="../public/index.html">Strona Główna</a></li>
-                <li><a href="../public/articles.html">Artykuły</a></li>
-                <li><a href="../public/forum.html">Forum</a></li>
-                <li><a href="../public/Oferta.html">Oferta i Kontakt</a></li>
-                <li><a href="../public/Astrofotografia.html">Astrofotografia</a></li>
+                <li><a href="/site/index.html">Strona Główna</a></li>
+                <li><a href="/site/articles.html">Artykuły</a></li>
+                <li><a href="/site/forum.html">Forum</a></li>
+                <li><a href="/site/Oferta.html">Oferta i Kontakt</a></li>
+                <li><a href="/site/Astrofotografia.html">Astrofotografia</a></li>
                 <li><a href="<?= e(baseUrl()) ?>" class="active-nav">Centrum Obserwacji</a></li>
             </ul>
         </nav>
