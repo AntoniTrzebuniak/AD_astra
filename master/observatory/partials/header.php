@@ -8,19 +8,29 @@
     <link rel="stylesheet" href="<?= e(assetUrl('styles.css')) ?>">
     <link rel="stylesheet" href="<?= e(assetUrl('css/observatory.css')) ?>">
     <style>
-        main.observatory-page a:link,
-        main.observatory-page a:visited,
-        .observatory-page .data-table a,
-        .observatory-page .panel a:not(.btn):not(.photo-thumb) {
+        main.observatory-page .data-table a,
+        main.observatory-page .data-table a:link,
+        main.observatory-page .data-table a:visited,
+        main.observatory-page .panel a:not(.btn):not(.btn-secondary):not(.photo-thumb),
+        main.observatory-page .card h3 a,
+        main.observatory-page .card h3 a:link,
+        main.observatory-page .card h3 a:visited {
             color: #FFD700 !important;
             text-decoration: none !important;
         }
-        main.observatory-page a:hover,
-        .observatory-page .data-table a:hover,
-        .observatory-page .panel a:not(.btn):not(.photo-thumb):hover {
+        main.observatory-page .data-table a:hover,
+        main.observatory-page .panel a:not(.btn):not(.btn-secondary):not(.photo-thumb):hover,
+        main.observatory-page .card h3 a:hover {
             color: #fff !important;
             text-decoration: underline !important;
             text-decoration-color: #FFD700 !important;
+        }
+        main.observatory-page a.btn,
+        main.observatory-page a.btn:link,
+        main.observatory-page a.btn:visited,
+        main.observatory-page a.btn:hover {
+            color: #000 !important;
+            text-decoration: none !important;
         }
     </style>
     <script src="<?= e(assetUrl('js/countdown.js')) ?>" defer></script>
