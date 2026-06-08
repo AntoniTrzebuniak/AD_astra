@@ -1,33 +1,30 @@
+.observatory-page a,
+.observatory-page a:link,
+.observatory-page a:visited,
+main.observatory-page .data-table a,
+main.observatory-page .data-table a:link,
+main.observatory-page .data-table a:visited,
+main.observatory-page .panel a:not(.btn):not(.photo-thumb),
+main.observatory-page .panel a:not(.btn):not(.photo-thumb):link,
+main.observatory-page .panel a:not(.btn):not(.photo-thumb):visited,
+main.observatory-page .card a,
+main.observatory-page .card a:link,
+main.observatory-page .card a:visited {
+    color: #FFD700 !important;
+    text-decoration: none !important;
+}
+
+.observatory-page a:hover,
+main.observatory-page .data-table a:hover,
+main.observatory-page .panel a:not(.btn):not(.photo-thumb):hover,
+main.observatory-page .card a:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+    text-decoration-color: #FFD700 !important;
+}
+
 .observatory-page a {
-    color: #FFD700;
-    text-decoration: none;
     transition: color 0.2s, opacity 0.2s;
-}
-
-.observatory-page a:hover {
-    color: #fff;
-    text-decoration: underline;
-    text-decoration-color: #FFD700;
-}
-
-.data-table a,
-.detail-table a,
-.panel a:not(.btn):not(.photo-thumb),
-.card a,
-.participant-list a,
-.suggestion-list a {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.data-table a:hover,
-.detail-table a:hover,
-.panel a:not(.btn):not(.photo-thumb):hover,
-.card a:hover {
-    color: #fff;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 215, 0, 0.6);
 }
 
 .observatory-page {

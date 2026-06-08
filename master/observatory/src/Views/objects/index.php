@@ -1,4 +1,5 @@
 <h1>Obiekty obserwowane</h1>
+<section class="panel">
 <table class="data-table">
     <thead>
         <tr><th>Oznaczenie</th><th>Nazwa</th><th>Typ</th><th>Jasność</th><th>Średnica</th><th>Nadchodzące</th></tr>
@@ -16,3 +17,4 @@
     <?php endforeach; ?>
     </tbody>
 </table>
+</section>

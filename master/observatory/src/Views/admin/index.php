@@ -3,7 +3,7 @@
 <div class="grid-2">
     <section class="panel form-panel">
         <h2>Dodaj obiekt</h2>
-        <form method="post" action="<?= e(baseUrl('admin/object')) ?>">
+        <form method="post" accept-charset="UTF-8" action="<?= e(baseUrl('admin/object')) ?>">
             <input type="hidden" name="csrf_token" value="<?= e(csrfToken()) ?>">
             <label>Oznaczenie
                 <input type="text" name="designation" required placeholder="(99942) Apophis">
@@ -33,7 +33,7 @@
 
     <section class="panel form-panel">
         <h2>Dodaj zdarzenie zakrycia</h2>
-        <form method="post" action="<?= e(baseUrl('admin/event')) ?>">
+        <form method="post" accept-charset="UTF-8" action="<?= e(baseUrl('admin/event')) ?>">
             <input type="hidden" name="csrf_token" value="<?= e(csrfToken()) ?>">
             <label>Obiekt
                 <select name="object_id" required>

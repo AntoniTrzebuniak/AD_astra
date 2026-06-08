@@ -38,8 +38,14 @@ docker compose up -d
 
 Alternatywnie (bez kasowania całej bazy):
 
+**Windows:**
+```bat
+fix-encoding.bat
+```
+
+**Linux/macOS:**
 ```bash
-docker compose exec -T mysql mysql -uroot -proot < master/observatory/database/fix-encoding.sql
+docker compose exec -T mysql mysql -uroot -proot --default-character-set=utf8mb4 < master/observatory/database/fix-encoding.sql
 docker compose restart php
 ```
 

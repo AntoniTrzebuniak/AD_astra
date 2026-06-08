@@ -2,10 +2,27 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($title ?? SITE_NAME) ?> - Ad Astra</title>
     <link rel="stylesheet" href="<?= e(assetUrl('styles.css')) ?>">
     <link rel="stylesheet" href="<?= e(assetUrl('css/observatory.css')) ?>">
+    <style>
+        main.observatory-page a:link,
+        main.observatory-page a:visited,
+        .observatory-page .data-table a,
+        .observatory-page .panel a:not(.btn):not(.photo-thumb) {
+            color: #FFD700 !important;
+            text-decoration: none !important;
+        }
+        main.observatory-page a:hover,
+        .observatory-page .data-table a:hover,
+        .observatory-page .panel a:not(.btn):not(.photo-thumb):hover {
+            color: #fff !important;
+            text-decoration: underline !important;
+            text-decoration-color: #FFD700 !important;
+        }
+    </style>
     <script src="<?= e(assetUrl('js/countdown.js')) ?>" defer></script>
 </head>
 <body>
