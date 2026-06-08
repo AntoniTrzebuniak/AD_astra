@@ -1,3 +1,35 @@
+.observatory-page a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.observatory-page a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #FFD700;
+}
+
+.data-table a,
+.detail-table a,
+.panel a:not(.btn):not(.photo-thumb),
+.card a,
+.participant-list a,
+.suggestion-list a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.data-table a:hover,
+.detail-table a:hover,
+.panel a:not(.btn):not(.photo-thumb):hover,
+.card a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 215, 0, 0.6);
+}
+
 .observatory-page {
     margin: 20px 5%;
     padding-bottom: 40px;

@@ -11,6 +11,8 @@ define('SITE_NAME', 'Ad Astra - Centrum Obserwacji');
 
 date_default_timezone_set('Europe/Warsaw');
 
+header('Content-Type: text/html; charset=utf-8');
+
 if (session_status() === PHP_SESSION_NONE) {
     session_set_cookie_params([
         'lifetime' => 0,

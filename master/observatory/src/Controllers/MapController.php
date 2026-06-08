@@ -24,7 +24,7 @@ class MapController
         $nightDate = getTonightDate();
         $stationModel = new Station($this->db);
         $data = $stationModel->getMapData($nightDate);
-        header('Content-Type: application/json');
+        header('Content-Type: application/json; charset=utf-8');
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         exit;
     }

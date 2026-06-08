@@ -27,7 +27,22 @@ docker compose up -d
 | Forum (Node.js) | http://localhost:3000 |
 | MySQL | localhost:3306 (root/root) |
 
-## Uruchomienie — XAMPP
+### Polskie znaki (UTF-8)
+
+Jeśli w bazie widać „NajwiÄ™kszy” zamiast „Największy”, zresetuj wolumen MySQL i załaduj dane ponownie:
+
+```bash
+docker compose down -v
+docker compose up -d
+```
+
+Alternatywnie (bez kasowania całej bazy):
+
+```bash
+docker compose exec -T mysql mysql -uroot -proot < master/observatory/database/fix-encoding.sql
+docker compose restart php
+```
+
 
 1. Skopiuj folder `master` do `htdocs/ad_astra/`
 2. Uruchom MySQL w XAMPP
