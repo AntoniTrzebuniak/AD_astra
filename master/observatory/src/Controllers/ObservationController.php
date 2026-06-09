@@ -46,14 +46,21 @@ class ObservationController
             redirect(baseUrl('station/edit'));
         }
 
+        $planId = isset($_POST['plan_id']) && $_POST['plan_id'] !== ''
+            ? (int) $_POST['plan_id']
+            : null;
+        $durationMs = isset($_POST['duration_ms']) && $_POST['duration_ms'] !== ''
+            ? (int) $_POST['duration_ms']
+            : null;
+
         $obsModel = new Observation($this->db);
         $obsId = $obsModel->create([
             'station_id' => (int) $station['id'],
             'object_id' => (int) $_POST['object_id'],
-            'plan_id' => $_POST['plan_id'] !== '' ? (int) $_POST['plan_id'] : null,
+            'plan_id' => $planId,
             'observed_at_utc' => toMysqlDatetime($_POST['observed_at_utc'] ?? gmdate('Y-m-d\TH:i')),
             'result' => $_POST['result'] ?? 'no_data',
-            'duration_ms' => $_POST['duration_ms'] !== '' ? (int) $_POST['duration_ms'] : null,
+            'duration_ms' => $durationMs,
             'notes' => trim($_POST['notes'] ?? ''),
         ]);
 
