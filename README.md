@@ -24,6 +24,7 @@ docker compose up -d
 | Usługa | URL |
 |--------|-----|
 | Centrum Obserwacji (PHP) | http://localhost:8080 |
+| phpMyAdmin (baza danych) | http://localhost:8081 |
 | Forum (Node.js) | http://localhost:3000 |
 | MySQL | localhost:3306 (root/root) |
 
